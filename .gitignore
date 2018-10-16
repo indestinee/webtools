@@ -1,0 +1,10 @@
+*swp
+ftp/
+__pycache__
+certificate
+key.txt
+
+static/ftp
+
+files/
+!certificate/cert.sh

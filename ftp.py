@@ -11,14 +11,13 @@ def delete():
     local_path = os.path.join(cfg.ftp_path, path)
     file_type = exist(local_path)
     if file_type == 2:
+        os.unlink(local_path)
         remove_dirs(local_path)
         if path == '':
             mkdir(cfg.ftp_path)
     if file_type == 1:
-        if os.path.islink(local_path):
-            os.unlink(local_path)
-        else:
-            os.remove(local_path)
+        os.unlink(local_path)
+        os.remove(local_path)
     return redirect(url_for('ftp', path=url_parent_directory(path)))
 # }}}
 

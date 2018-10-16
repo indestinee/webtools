@@ -5,7 +5,8 @@ import shutil, chardet, os, time
 
 
 def exist(path):# {{{
-    if os.path.isfile(path) or os.path.islink(path):
+    path = os.path.realpath(path)
+    if os.path.isfile(path):
         return 1
     if os.path.isdir(path):
         return 2

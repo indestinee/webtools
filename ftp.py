@@ -15,7 +15,7 @@ def delete():
         if path == '':
             mkdir(cfg.ftp_path)
     if file_type == 1:
-        if os.path.islink(local_path)
+        if os.path.islink(local_path):
             os.unlink(local_path)
         else:
             os.remove(local_path)

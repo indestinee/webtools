@@ -1,0 +1,20 @@
+{% extends 'template.html' %}
+{% block header %}
+<title>Spider {{site_title}}</title>
+{% endblock %}
+{% block nav %}
+<form class="navbar-form navbar-left" action='/spider' method='POST'>
+  <div class="form-group">
+    <input type="text" class="form-control" name="url" placeholder='URL' value="{{url}}">
+  </div>
+  <button type="submit" class="btn btn-default">visit</button>
+  <button type="button" class="btn btn-default" aria-label="Left Align" onclick='window.location.reload()'>
+    <span class="glyphicon glyphicon-refresh" aria-hidden="true"></span>
+  </button>
+  <button type="reset" class="btn btn-default" aria-label="Left Align">
+    <span class="glyphicon glyphicon-trash" aria-hidden="true"></span>
+  </button>
+</form>
+{% endblock %}
+{% block extra %}
+{% endblock %}

@@ -13,7 +13,7 @@ def get_args():
 class Config(object):
     def __init__(self):
         self.args = get_args()
-        self.host = '0.0.0.0' if self.args.public else '127.0.0.1'
+        self.host = '::' if self.args.public else '127.0.0.1'
         self.port = self.args.port
         self.debug = self.args.debug
         self.static_folder = 'static'
